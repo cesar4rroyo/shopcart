@@ -143,6 +143,8 @@ footer {
     flex: 1;
 }
 
+/* cart */
+
 .cart {
     padding: 1rem;
     margin: 1rem;
@@ -192,4 +194,27 @@ footer {
 
 .total>div, .total>button {
     flex: 1;
+}
+
+/* checkout component */
+
+.form-container {
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    padding: 1rem;
+    border: 0.1rem #c0c0c0 solid;
+}
+
+.form-container li {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
