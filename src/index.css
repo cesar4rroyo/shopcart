@@ -3,14 +3,15 @@ html {
     box-sizing: border-box;
 }
 
-body,
-#root {
+body, #root {
     height: 100vh;
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
+
 .grid-container {
     display: grid;
     grid-template-areas: "header" "main" "footer";
@@ -19,11 +20,7 @@ a {
     height: 100%;
 }
 
-body,
-input,
-select,
-button,
-textarea {
+body, input, select, button, textarea {
     font-size: 1.6rem;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -58,18 +55,22 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 .content {
     display: flex;
     flex-wrap: wrap;
 }
+
 .main {
     flex: 3 60rem;
 }
+
 .sidebar {
     flex: 1 20rem;
 }
 
 /* products */
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -79,46 +80,55 @@ footer {
     margin: 0;
     list-style-type: none;
 }
+
 .products li {
     flex: 0 1 29rem;
     height: 47rem;
     padding: 1rem;
 }
+
 .product {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
+
 .product img {
     max-width: 37rem;
     max-height: 37rem;
 }
+
 .product-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.product-price div,
-.product-price button {
+
+.product-price div, .product-price button {
     text-align: center;
     flex: 1;
 }
+
 .product-price div {
     font-size: 2rem;
 }
+
 .btn {
     padding: 1rem;
     border: 0.1rem #c0c0c0 solid;
     background-color: #f0f0f0;
     cursor: pointer;
 }
+
 .btn:hover {
     border: 0.1rem #1a0000 solid;
 }
+
 .btn.primary {
     background-color: orange;
 }
+
 /* filter */
 
 .filter {
@@ -128,6 +138,58 @@ footer {
     margin: 1rem;
     border-bottom: 0.1rem #c0c0c0 solid;
 }
+
 .filter div {
+    flex: 1;
+}
+
+.cart {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+}
+
+.cart-header {
+    border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.cart-items {
+    padding: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+.cart-items img {
+    width: 5rem;
+}
+
+.cart-items li {
+    display: flex;
+}
+
+.cart-items li div {
+    padding: .5rem;
+}
+
+.cart-items li div:last-child {
+    flex: 1;
+}
+
+.right {
+    text-align: right;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.total>div {
+    font-size: 2rem;
+}
+
+.total>div, .total>button {
     flex: 1;
 }
