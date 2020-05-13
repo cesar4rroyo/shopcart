@@ -3,7 +3,8 @@ html {
     box-sizing: border-box;
 }
 
-body, #root {
+body,
+#root {
     height: 100vh;
     margin: 0;
 }
@@ -20,7 +21,11 @@ a {
     height: 100%;
 }
 
-body, input, select, button, textarea {
+body,
+input,
+select,
+button,
+textarea {
     font-size: 1.6rem;
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -105,7 +110,8 @@ footer {
     align-items: center;
 }
 
-.product-price div, .product-price button {
+.product-price div,
+.product-price button {
     text-align: center;
     flex: 1;
 }
@@ -170,7 +176,7 @@ footer {
 }
 
 .cart-items li div {
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .cart-items li div:last-child {
@@ -188,11 +194,12 @@ footer {
     width: 100%;
 }
 
-.total>div {
+.total > div {
     font-size: 2rem;
 }
 
-.total>div, .total>button {
+.total > div,
+.total > button {
     flex: 1;
 }
 
@@ -217,4 +224,27 @@ input {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+}
+
+/* Product details */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 96vh;
+}
+.product-details img {
+    max-height: 100vh;
+    max-width: 46rem;
+    margin: 0 auto;
+}
+.product-details-description {
+    flex: 1 1;
+    margin: 1rem;
+}
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    z-index: 100;
 }
