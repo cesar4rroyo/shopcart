@@ -225,29 +225,30 @@ input {
     flex-direction: column;
     padding: 1rem;
 }
-<<<<<<< HEAD
-=======
 
 /* Product details */
+
 .product-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-height: 96vh;
 }
+
 .product-details img {
-    max-height: 100vh;
+    max-height: 80vh;
     max-width: 46rem;
     margin: 0 auto;
 }
+
 .product-details-description {
     flex: 1 1;
     margin: 1rem;
 }
+
 .close-modal {
     position: absolute;
     right: 1rem;
     top: 2.5rem;
     z-index: 100;
 }
->>>>>>> 322da9a131dcf9e96234804857bc47500c4bdbf4
