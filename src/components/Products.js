@@ -2,11 +2,17 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Product from "./Product";
 import ModalProduct from "./ModalProduct";
+import { connect } from "react-redux";
+import { fetchProducts } from "../actions/productActions";
 
-export default class Products extends Component {
+class Products extends Component {
     state = {
         product: null,
     };
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
+
     openModal = (product) => {
         this.setState({ product });
     };
@@ -18,22 +24,26 @@ export default class Products extends Component {
         return (
             <div>
                 <Fade bottom cascade>
-                    <ul className="products">
-                        {this.props.products.map((product) => (
-                            <li key={product._id}>
-                                <Product
-                                    id={product._id}
-                                    image={product.image}
-                                    title={product.title}
-                                    price={product.price}
-                                    fxModal={() => this.openModal(product)}
-                                    fxAddCart={() =>
-                                        this.props.addToCart(product)
-                                    }
-                                />
-                            </li>
-                        ))}
-                    </ul>
+                    {!this.props.products ? (
+                        <div>Loading...</div>
+                    ) : (
+                        <ul className="products">
+                            {this.props.products.map((product) => (
+                                <li key={product._id}>
+                                    <Product
+                                        id={product._id}
+                                        image={product.image}
+                                        title={product.title}
+                                        price={product.price}
+                                        fxModal={() => this.openModal(product)}
+                                        fxAddCart={() =>
+                                            this.props.addToCart(product)
+                                        }
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </Fade>
                 {product && (
                     <ModalProduct
@@ -55,3 +65,9 @@ export default class Products extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    products: state.products.items,
+});
+
+export default connect(mapStateToProps, { fetchProducts })(Products);
