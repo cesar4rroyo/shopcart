@@ -15,11 +15,17 @@ class App extends Component {
             <Provider store={store}>
                 <div className="grid-container">
                     <Header />
-
+                    <div className="container_img_hero">
+                        <img
+                            className="img_hero"
+                            src="images/hero.jpg"
+                            alt="hero"
+                        />
+                    </div>
+                    <Filter />
                     <main>
                         <div className="content">
                             <div className="main">
-                                <Filter />
                                 <Products />
                             </div>
                             <div className="sidebar">
