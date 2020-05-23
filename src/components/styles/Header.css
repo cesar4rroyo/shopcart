@@ -1,0 +1,160 @@
+/* Header component styles */
+
+.responsive_menu {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 70px;
+    padding: 30px 10px;
+}
+
+header img {
+    height: 50px;
+    margin: 2.2rem;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: yellow;
+}
+
+.search_header {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    padding: 4px 45px 5px 20px;
+    border: 0;
+    outline: none;
+}
+
+.fa-shopping-cart,
+.fa-user-circle,
+.fa-bars,
+.fa-search {
+    color: white !important;
+    font-size: 2.5rem;
+}
+
+.menu_header {
+    display: flex;
+}
+
+.menu_header a {
+    padding: 0.8rem;
+}
+
+.menu_text {
+    margin-top: 1rem;
+}
+
+.user_container {
+    display: flex;
+}
+
+.user_container a {
+    padding: 0.8rem;
+}
+
+.menu_text {
+    padding-top: 0.13rem;
+    font-weight: bold;
+}
+
+.img_hero {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+    /* height: 400px; */
+}
+
+.container_img_hero {
+    /* margin-top: 1rem; */
+    height: 350px;
+    overflow: hidden;
+}
+
+/* end of Header component styles */
+
+/* media queries */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .search_header {
+        width: 500px !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .nav__links li {
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .responsive_menu li {
+        padding: 0 40px !important;
+    }
+    .menu_responsive_icon {
+        right: 0rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav__links,
+    .menu_header {
+        display: none;
+    }
+    header img {
+        height: 40px;
+        margin: 1rem;
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+    }
+    .menu_responsive_icon {
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+    }
+    .responsive_menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    .responsive_menu li {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .img_hero {
+        position: initial;
+        top: initial;
+        transform: initial;
+    }
+    .container_img_hero {
+        height: auto;
+    }
+}
