@@ -24,15 +24,13 @@ class App extends Component {
                     </div>
                     <Filter />
                     <main>
-                        <div className="content">
-                            <div className="main">
-                                <Products />
-                            </div>
-                            <div className="sidebar">
-                                <Cart createOrder={this.createOrder} />
-                            </div>
+                        <div className="container">
+                            <Products />
                         </div>
                     </main>
+                    <div className="sidebar">
+                        <Cart createOrder={this.createOrder} />
+                    </div>
                     <footer>All rigth is reserved.</footer>
                 </div>
             </Provider>

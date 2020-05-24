@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/product.css";
 
 const Product = (props) => {
     return (
