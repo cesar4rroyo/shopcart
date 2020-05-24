@@ -95,6 +95,11 @@ header img {
     overflow: hidden;
 }
 
+.form_responsive_container,
+.close_search {
+    display: none;
+}
+
 /* end of Header component styles */
 
 /* media queries */
@@ -145,6 +150,24 @@ header img {
     }
     .responsive_menu li {
         padding: 0 20px;
+    }
+    .form_responsive_container {
+        display: initial;
+        margin-left: 3rem;
+    }
+    .form_responsive_container input {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        outline: none;
+        width: 70vw;
+        color: white;
+        padding: 4px 45px 5px 20px;
+    }
+    .close_search {
+        display: initial;
+        position: absolute;
+        top: 22px;
+        right: 1.8rem;
     }
 }
 
