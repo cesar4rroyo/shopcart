@@ -47,10 +47,7 @@ header img {
     outline: none;
 }
 
-.fa-shopping-cart,
-.fa-user-circle,
-.fa-bars,
-.fa-search {
+.fa-shopping-cart, .fa-user-circle, .fa-bars, .fa-search {
     color: white !important;
     font-size: 2.5rem;
 }
@@ -95,9 +92,17 @@ header img {
     overflow: hidden;
 }
 
-.form_responsive_container,
-.close_search {
+.form_responsive_container, .close_search {
     display: none;
+}
+
+.total_products {
+    background-color: #E75353;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    padding: 1px 6px 1px 6px;
 }
 
 /* end of Header component styles */
@@ -126,8 +131,7 @@ header img {
 }
 
 @media (max-width: 767px) {
-    .nav__links,
-    .menu_header {
+    .nav__links, .menu_header {
         display: none;
     }
     header img {

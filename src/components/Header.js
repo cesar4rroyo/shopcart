@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Header.css";
 import SearchResponsive from "./SearchResponsive";
+import { connect } from "react-redux";
+import SlideCart from "./SlideCart";
 
-const Header = () => {
+const Header = (props) => {
     const [search, setSearch] = useState(false);
+    const [visible, setVisible] = useState(false);
     const handleSearch = () => {
         if (search) {
             setSearch(false);
@@ -11,6 +14,22 @@ const Header = () => {
             setSearch(true);
         }
     };
+    const handleClick = () => {
+        if (visible) {
+            setVisible(false);
+        } else if (!visible) {
+            setVisible(true);
+        }
+    };
+    useEffect(() => {
+        if (visible) {
+            document.body.style.overflow = "hidden";
+        } else if (!visible) {
+            document.body.style.overflow = "unset";
+        }
+    });
+
+    const { cartItems } = props;
 
     return (
         <header>
@@ -46,7 +65,15 @@ const Header = () => {
                     </div>
                 </li>
                 <li>
-                    <i className="fas fa-shopping-cart"></i>
+                    <i
+                        className="fas fa-shopping-cart"
+                        onClick={handleClick}
+                    ></i>
+                    <span className="total_products">
+                        {cartItems.length !== 0
+                            ? cartItems.reduce((a, c) => a + c.count, 0)
+                            : null}
+                    </span>
                 </li>
             </ul>
             {search ? (
@@ -60,7 +87,15 @@ const Header = () => {
                         <i className="far fa-user-circle"></i>
                     </li>
                     <li>
-                        <i className="fas fa-shopping-cart"></i>
+                        <i
+                            className="fas fa-shopping-cart"
+                            onClick={handleClick}
+                        ></i>
+                        <span className="total_products">
+                            {cartItems.length !== 0
+                                ? cartItems.reduce((a, c) => a + c.count, 0)
+                                : null}
+                        </span>
                     </li>
                     <li className="menu_responsive_icon">
                         <a href="/">
@@ -69,8 +104,17 @@ const Header = () => {
                     </li>
                 </ul>
             )}
+            {visible ? (
+                <SlideCart
+                    createOrder={props.createOrder}
+                    isVisibe={visible}
+                    onClose={handleClick}
+                />
+            ) : null}
         </header>
     );
 };
-
-export default Header;
+const mapStateToProps = (state) => ({
+    cartItems: state.cart.cartItems,
+});
+export default connect(mapStateToProps)(Header);

@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import Proceed from "./Proceed";
 import FormOrder from "./FormOrder";
 import { removeFromCart } from "../actions/cartActions";
+import "./styles/carts.css";
 
 class Cart extends Component {
     state = { showCheckOut: false, name: "", email: "", address: "", total: 0 };
@@ -23,6 +24,7 @@ class Cart extends Component {
     };
     render() {
         const { cartItems } = this.props;
+        // console.log(cartItems);
 
         const proceedFx = () => {
             this.setState({
@@ -32,10 +34,12 @@ class Cart extends Component {
         return (
             <div>
                 {cartItems.length === 0 ? (
-                    <div className="cart cart-header">Cart is empty</div>
+                    <div className="cart cart-header">
+                        No tienes ningun producto
+                    </div>
                 ) : (
                     <div className="cart cart-header">
-                        You have {cartItems.length} in the cart
+                        Tienes {cartItems.length} productos seleccionados
                     </div>
                 )}
                 <div>
