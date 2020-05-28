@@ -4,7 +4,11 @@ import Fade from "react-reveal/Fade";
 import CartItem from "./CartItem";
 import Proceed from "./Proceed";
 import FormOrder from "./FormOrder";
-import { removeFromCart } from "../actions/cartActions";
+import {
+    removeFromCart,
+    decreaseProducts,
+    addToCart,
+} from "../actions/cartActions";
 import "./styles/carts.css";
 
 class Cart extends Component {
@@ -53,8 +57,16 @@ class Cart extends Component {
                                             title={item.title}
                                             price={item.price}
                                             count={item.count}
+                                            addToCart={() =>
+                                                this.props.addToCart(item)
+                                            }
                                             removeClick={() =>
                                                 this.props.removeFromCart(item)
+                                            }
+                                            decreaseProduct={() =>
+                                                this.props.decreaseProducts(
+                                                    item
+                                                )
                                             }
                                         />
                                     </li>
@@ -64,7 +76,10 @@ class Cart extends Component {
                     </div>
                     {cartItems.length !== 0 && (
                         <div>
-                            <Proceed proceedBtn={proceedFx}>
+                            <Proceed
+                                proceedBtn={proceedFx}
+                                onClose={this.props.onClose}
+                            >
                                 <span>
                                     {cartItems.reduce(
                                         (a, c) => a + c.price * c.count,
@@ -92,4 +107,8 @@ const mapStateToProps = (state) => ({
     cartItems: state.cart.cartItems,
 });
 
-export default connect(mapStateToProps, { removeFromCart })(Cart);
+export default connect(mapStateToProps, {
+    removeFromCart,
+    decreaseProducts,
+    addToCart,
+})(Cart);

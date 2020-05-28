@@ -69,11 +69,11 @@ const Header = (props) => {
                         className="fas fa-shopping-cart"
                         onClick={handleClick}
                     ></i>
-                    <span className="total_products">
-                        {cartItems.length !== 0
-                            ? cartItems.reduce((a, c) => a + c.count, 0)
-                            : null}
-                    </span>
+                    {cartItems.length === 0 ? null : (
+                        <span className="total_products">
+                            {cartItems.reduce((a, c) => a + c.count, 0)}
+                        </span>
+                    )}
                 </li>
             </ul>
             {search ? (

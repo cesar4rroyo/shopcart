@@ -2,12 +2,20 @@ import React from "react";
 
 const Proceed = (props) => {
     return (
-        <div className="cart">
+        <div className="total_container">
             <div className="total">
-                <div>Total: ${props.children}</div>
-                <button className="btn primary" onClick={props.proceedBtn}>
-                    Proceed
-                </button>
+                <div className="value_container">
+                    Total:
+                    <span className="total_value"> ${props.children}</span>
+                </div>
+                <div className="total_btn_actions">
+                    <button className="close_btn" onClick={props.onClose}>
+                        Cerrar
+                    </button>
+                    <button className="proceed_btn" onClick={props.proceedBtn}>
+                        Proceder compra
+                    </button>
+                </div>
             </div>
         </div>
     );

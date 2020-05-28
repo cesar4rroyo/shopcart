@@ -8,8 +8,10 @@ const SlideCart = (props) => {
         <div className="overlay_container">
             <Fade right>
                 <div className="slide_container">
-                    <Cart createOrder={props.createOrder} />
-                    <button onClick={props.onClose}>Cerrar</button>
+                    <Cart
+                        createOrder={props.createOrder}
+                        onClose={props.onClose}
+                    />
                 </div>
             </Fade>
         </div>

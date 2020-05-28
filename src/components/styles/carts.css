@@ -3,11 +3,14 @@
 .cart {
     padding: 1rem;
     margin: 1rem;
+    margin-left: 0rem;
     display: flex;
+    width: 100%;
 }
 
 .cart-header {
     border-bottom: 0.1rem #c0c0c0 solid;
+    margin-left: 1rem;
 }
 
 .cart-items {
@@ -15,16 +18,19 @@
     width: 100%;
     list-style-type: none;
 }
+
 .cart_item_container {
     width: 100%;
     display: flex;
     margin: 1rem;
     color: #6a6a6a;
 }
+
 .cart_item_container img {
     height: 100px;
     margin: 0;
     padding-right: 10px;
+    position: initial;
 }
 
 .delete_container {
@@ -35,36 +41,92 @@
     padding: 2px 8px 2px 8px;
     color: #6a6a6a;
 }
+
 .delete_container:hover {
     background-color: #e75353;
     border-radius: 50%;
     color: white;
     padding: 2px 8px 2px 8px;
 }
+
 .price_and_count {
     color: black;
     font-weight: bold;
 }
+
 .stepper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 5px;
 }
+
 .stepper_control {
     border: 0;
     background-color: transparent;
     outline: none;
     margin-right: 5px;
 }
+
 .stepper_control:hover {
     border: 0;
     background-color: transparent;
     outline: none;
 }
+
 .stepper_control i {
     color: #6a6a6a;
 }
+
 .count_value_container {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+
+.value_container {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.total_container {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px;
+    color: #6a6a6a;
+    font-weight: bold;
+}
+
+.total_value {
+    position: absolute;
+    right: 1rem;
+}
+
+.close_btn {
+    width: 25%;
+    height: 45px;
+    line-height: 45px;
+    background-color: white;
+    outline: 0;
+    border: 1px solid #70578b;
+    color: #70578b;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.proceed_btn {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #70578b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.total_btn_actions {
+    display: flex;
+    /* padding-left: 10px; */
 }
