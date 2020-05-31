@@ -64,7 +64,7 @@ const Header = (props) => {
                         </div>
                     </div>
                 </li>
-                <li>
+                <li className="cart_li">
                     <i
                         className="fas fa-shopping-cart"
                         onClick={handleClick}

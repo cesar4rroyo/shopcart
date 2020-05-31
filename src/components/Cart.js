@@ -81,10 +81,12 @@ class Cart extends Component {
                                 onClose={this.props.onClose}
                             >
                                 <span>
-                                    {cartItems.reduce(
-                                        (a, c) => a + c.price * c.count,
-                                        0
-                                    )}
+                                    {cartItems
+                                        .reduce(
+                                            (a, c) => a + c.price * c.count,
+                                            0
+                                        )
+                                        .toFixed(2)}
                                 </span>
                             </Proceed>
                             {this.state.showCheckOut && (

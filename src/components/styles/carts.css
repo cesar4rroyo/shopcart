@@ -7,6 +7,11 @@
     display: flex;
     width: 100%;
 }
+.cart ul {
+    height: 68vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
 
 .cart-header {
     border-bottom: 0.1rem #c0c0c0 solid;
@@ -34,8 +39,6 @@
 }
 
 .delete_container {
-    position: absolute;
-    right: 10px;
     cursor: pointer;
     font-size: 2rem;
     padding: 2px 8px 2px 8px;
@@ -49,9 +52,15 @@
     padding: 2px 8px 2px 8px;
 }
 
+.title_container {
+    width: 33vw;
+}
+
 .price_and_count {
     color: black;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
 }
 
 .stepper {

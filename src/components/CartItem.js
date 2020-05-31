@@ -23,7 +23,7 @@ const CartItem = (props) => {
             </div>
             <img src={props.image} alt={props.title} />
             <div>
-                <div> {props.title} </div>
+                <div className="title_container"> {props.title} </div>
                 <div className="price_and_count">
                     ${props.price}
                     <span className="delete_container">
