@@ -1,37 +1,21 @@
-import React, { Component } from "react";
-import Products from "./components/Products";
-import Filter from "./components/Filter";
+import React from "react";
 import store from "./store";
 import { Provider } from "react-redux";
-import Header from "./components/Header";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BolsaCompra from "./components/BolsaCompra";
 
-class App extends Component {
-    createOrder = (order) => {
-        console.log(order);
-    };
-    render() {
-        return (
+const App = () => {
+    return (
+        <Router>
             <Provider store={store}>
-                <div className="grid-container">
-                    <Header createOrder={this.createOrder} />
-                    <div className="container_img_hero">
-                        <img
-                            className="img_hero"
-                            src="images/hero.jpg"
-                            alt="hero"
-                        />
-                    </div>
-                    <Filter />
-                    <main>
-                        <div className="container">
-                            <Products />
-                        </div>
-                    </main>
-                    <footer>All rigth is reserved.</footer>
-                </div>
+                <Switch>
+                    <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/compra" component={BolsaCompra}></Route>
+                </Switch>
             </Provider>
-        );
-    }
-}
+        </Router>
+    );
+};
 
 export default App;
