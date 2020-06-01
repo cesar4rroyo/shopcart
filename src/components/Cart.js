@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Fade from "react-reveal/Fade";
 import CartItem from "./CartItem";
 import Proceed from "./Proceed";
-import FormOrder from "./FormOrder";
 import {
     removeFromCart,
     decreaseProducts,
@@ -12,29 +11,8 @@ import {
 import "./styles/carts.css";
 
 class Cart extends Component {
-    state = { showCheckOut: false, name: "", email: "", address: "", total: 0 };
-    handleInput = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
-    };
-    createOrder = (e) => {
-        e.preventDefault();
-        const order = {
-            name: this.state.name,
-            email: this.state.email,
-            address: this.state.address,
-            cartItems: this.props.cartItems,
-        };
-        this.props.createOrder(order);
-    };
     render() {
         const { cartItems } = this.props;
-        // console.log(cartItems);
-
-        const proceedFx = () => {
-            this.setState({
-                showCheckOut: true,
-            });
-        };
         return (
             <div>
                 {cartItems.length === 0 ? (
@@ -76,10 +54,7 @@ class Cart extends Component {
                     </div>
                     {cartItems.length !== 0 && (
                         <div>
-                            <Proceed
-                                proceedBtn={proceedFx}
-                                onClose={this.props.onClose}
-                            >
+                            <Proceed onClose={this.props.onClose}>
                                 <span>
                                     {cartItems
                                         .reduce(
@@ -89,14 +64,6 @@ class Cart extends Component {
                                         .toFixed(2)}
                                 </span>
                             </Proceed>
-                            {this.state.showCheckOut && (
-                                <Fade right cascade>
-                                    <FormOrder
-                                        submitFx={this.createOrder}
-                                        onChangeFx={this.handleInput}
-                                    />
-                                </Fade>
-                            )}
                         </div>
                     )}
                 </div>

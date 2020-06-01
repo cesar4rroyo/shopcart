@@ -24,3 +24,8 @@
         width: 85%;
     }
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .slide_container {
+        width: 40%;
+    }
+}

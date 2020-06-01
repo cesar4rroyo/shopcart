@@ -1,0 +1,79 @@
+.steps_buy li {
+    list-style: none;
+    display: inline-flex;
+    padding: 5px;
+}
+
+.steps_buy {
+    display: block;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #70578b;
+    margin-bottom: 40px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.logo_compra {
+    height: 50px;
+}
+
+.line_separator {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0 5px 0 10px;
+}
+
+.step_number {
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    padding: 1px 8px 1px 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#item_container li {
+    list-style: none;
+}
+
+.container {
+    text-align: initial;
+}
+
+.proceder_compra button {
+    width: 200px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #70578b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.proceder_compra {
+    text-align: center;
+}
+
+.proceder_compra button:hover {
+    color: white;
+    background-color: #321f49;
+}
+
+.volver_compra {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.volver_compra a {
+    padding: 4px;
+    border-bottom: 1px dashed #70578b;
+}
+
+@media (max-width: 767px) {
+    .steps_buy li {
+        display: none;
+    }
+}

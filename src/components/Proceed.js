@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Proceed = (props) => {
     return (
@@ -12,9 +13,13 @@ const Proceed = (props) => {
                     <button className="close_btn" onClick={props.onClose}>
                         Cerrar
                     </button>
-                    <button className="proceed_btn" onClick={props.proceedBtn}>
+                    <Link
+                        to="/compra"
+                        className="proceed_btn"
+                        onClick={props.proceedBtn}
+                    >
                         Proceder compra
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
