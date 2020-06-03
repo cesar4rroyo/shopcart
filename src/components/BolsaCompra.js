@@ -27,6 +27,7 @@ const BolsaCompra = (props) => {
         this.props.createOrder(order);
     };
     const cartItems = props.cartItems;
+
     const handleClick = () => {
         setShow(true);
     };
@@ -49,14 +50,16 @@ const BolsaCompra = (props) => {
                     </span>
                 </li>
                 <li>
-                    <span className="step_number">2</span>
+                    <span className={show ? "step_number" : "step_number_off"}>
+                        2
+                    </span>
                     <span className="step_name">Verificacion</span>
                     <span className="line_separator">
                         <i className="fas fa-chevron-right"></i>
                     </span>
                 </li>
                 <li>
-                    <span className="step_number">3</span>
+                    <span className="step_number_off">3</span>
                     <span className="step_name">Confirmacion</span>
                 </li>
             </div>

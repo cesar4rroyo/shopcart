@@ -7,14 +7,18 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    background-color: #F9F9F9;
+}
+
+body {
+    background-color: #F9F9F9;
 }
 
 .active {
     display: none;
 }
 
-body,
-#root {
+body, #root {
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -24,14 +28,9 @@ a {
     text-decoration: none;
 }
 
-body,
-input,
-select,
-button,
-textarea {
+body, input, select, button, textarea {
     font-size: 1.6rem;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 a:hover {
@@ -91,28 +90,3 @@ input {
 }
 
 /* Product details */
-
-.product-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-height: 96vh;
-}
-
-.product-details img {
-    max-height: 80vh;
-    max-width: 46rem;
-    margin: 0 auto;
-}
-
-.product-details-description {
-    flex: 1 1;
-    margin: 1rem;
-}
-
-.close-modal {
-    position: absolute;
-    right: 1rem;
-    top: 2.5rem;
-    z-index: 100;
-}

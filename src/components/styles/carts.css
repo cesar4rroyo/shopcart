@@ -20,12 +20,12 @@
 
 .cart-items {
     padding: 0;
-    width: 100%;
+    width: 90%;
     list-style-type: none;
 }
 
 .cart_item_container {
-    width: 100%;
+    width: 90%;
     display: flex;
     margin: 1rem;
     color: #6a6a6a;
@@ -41,15 +41,20 @@
 .delete_container {
     cursor: pointer;
     font-size: 2rem;
-    padding: 2px 8px 2px 8px;
     color: #6a6a6a;
+    height: 100px;
+    width: 100px;
+    padding: 2px 5px 2px 5px;
+    /* margin-left: 250px; */
 }
 
 .delete_container:hover {
     background-color: #e75353;
+
     border-radius: 50%;
     color: white;
-    padding: 2px 8px 2px 8px;
+
+    /* padding: 2px 8px 2px 8px; */
 }
 
 .title_container {
@@ -57,10 +62,13 @@
 }
 
 .price_and_count {
+    /* width: 200px; */
     color: black;
     font-weight: bold;
-    display: flex;
-    justify-content: space-between;
+
+    /* display: flex; */
+
+    /* justify-content: space-between; */
 }
 
 .stepper {

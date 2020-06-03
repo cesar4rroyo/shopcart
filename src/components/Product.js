@@ -9,9 +9,9 @@ const Product = (props) => {
                 <p>{props.title}</p>
             </a>
             <div className="product-price">
-                <div>${props.price}</div>
-                <button onClick={props.fxAddCart} className="btn primary">
-                    Add to Cart
+                <div className="price_container">${props.price}</div>
+                <button onClick={props.fxAddCart} className="btn_add_to_cart">
+                    Agregar a la bolsa
                 </button>
             </div>
         </div>
