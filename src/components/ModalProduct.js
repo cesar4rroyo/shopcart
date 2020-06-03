@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
+import "./styles/modal.css";
 
 const ModalProduct = (props) => {
     const modalStyles = {
@@ -16,35 +17,62 @@ const ModalProduct = (props) => {
                 style={modalStyles}
             >
                 <Zoom>
-                    <button className="close-modal" onClick={props.closeClick}>
-                        x
-                    </button>
-                    <div className="product-details">
-                        <img src={props.image} alt={props.title} />
-                        <div className="product-details-description">
-                            <p>
-                                <strong>{props.title}</strong>
-                            </p>
-                            <p>{props.description}</p>
-                            <p>
-                                Available Sizes
-                                {props.availableSizes.map((x) => (
-                                    <span>
-                                        {" "}
-                                        <button className="btn">
-                                            {x}
-                                        </button>{" "}
-                                    </span>
-                                ))}
-                            </p>
-                            <div className="product-price">
-                                <div>${props.price}</div>
-                                <button
-                                    className="btn primary"
-                                    onClick={props.addToCartClick}
-                                >
-                                    Add to cart
-                                </button>
+                    <div className="container">
+                        <button
+                            className="close-modal"
+                            onClick={props.closeClick}
+                        >
+                            x
+                        </button>
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <img
+                                    className="img_modal"
+                                    src={props.image}
+                                    alt={props.title}
+                                />
+                            </div>
+                            <div className="col-sm-8">
+                                <div className="product-details-description">
+                                    <p className="product_title">
+                                        <strong>{props.title}</strong>
+                                    </p>
+                                    <p className="product_description">
+                                        {props.description}
+                                    </p>
+                                    <p>
+                                        Available Sizes
+                                        <div className="size_container">
+                                            {props.availableSizes.map(
+                                                (x, index) => (
+                                                    <span key={index}>
+                                                        {" "}
+                                                        <button className="btn_tallas">
+                                                            {x}
+                                                        </button>{" "}
+                                                    </span>
+                                                )
+                                            )}
+                                        </div>
+                                    </p>
+                                    <div className="color_container">
+                                        <p>Colors</p>
+                                        <button className="blanco"> </button>
+                                        <button className="rosado"> </button>
+                                        <button className="amarillo"> </button>
+                                        <button className="verde"> </button>
+                                    </div>
+                                    <div className="product-price">
+                                        <p>Precio</p>
+                                        <div>${props.price}</div>
+                                    </div>
+                                    <button
+                                        className="btn_add"
+                                        onClick={props.addToCartClick}
+                                    >
+                                        Add to cart
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

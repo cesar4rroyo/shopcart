@@ -8,23 +8,38 @@
     align-self: center;
     gap: 10px;
 }
+
 .product {
     width: fit-content;
+    background-color: white;
 }
+
 .product img {
     max-width: 100%;
     padding: 2rem;
 }
+
 .products img:hover {
     transform: scale(1.1);
 }
+
 .product-price div {
     font-size: 2rem;
+    color: black;
 }
+
+.product p {
+    color: rgba(0, 0, 0, 0.8);
+}
+
 .product-price {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn_add_to_cart {
+    display: none;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {

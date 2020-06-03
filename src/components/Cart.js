@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Fade from "react-reveal/Fade";
 import CartItem from "./CartItem";
 import Proceed from "./Proceed";
 import {
@@ -14,7 +13,7 @@ class Cart extends Component {
     render() {
         const { cartItems } = this.props;
         return (
-            <div>
+            <div className="cart_general">
                 {cartItems.length === 0 ? (
                     <div className="cart cart-header">
                         No tienes ningun producto
@@ -26,31 +25,27 @@ class Cart extends Component {
                 )}
                 <div>
                     <div className="cart">
-                        <Fade left cascade>
-                            <ul className="cart-items">
-                                {cartItems.map((item) => (
-                                    <li key={item._id}>
-                                        <CartItem
-                                            image={item.image}
-                                            title={item.title}
-                                            price={item.price}
-                                            count={item.count}
-                                            addToCart={() =>
-                                                this.props.addToCart(item)
-                                            }
-                                            removeClick={() =>
-                                                this.props.removeFromCart(item)
-                                            }
-                                            decreaseProduct={() =>
-                                                this.props.decreaseProducts(
-                                                    item
-                                                )
-                                            }
-                                        />
-                                    </li>
-                                ))}
-                            </ul>
-                        </Fade>
+                        <ul className="cart-items">
+                            {cartItems.map((item) => (
+                                <li key={item._id}>
+                                    <CartItem
+                                        image={item.image}
+                                        title={item.title}
+                                        price={item.price}
+                                        count={item.count}
+                                        addToCart={() =>
+                                            this.props.addToCart(item)
+                                        }
+                                        removeClick={() =>
+                                            this.props.removeFromCart(item)
+                                        }
+                                        decreaseProduct={() =>
+                                            this.props.decreaseProducts(item)
+                                        }
+                                    />
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                     {cartItems.length !== 0 && (
                         <div>

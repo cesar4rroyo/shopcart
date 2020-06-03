@@ -2,7 +2,7 @@ import React from "react";
 
 const FormOrder = (props) => {
     return (
-        <div className="cart">
+        <div className="form_container">
             <form onSubmit={props.submitFx}>
                 <ul className="form-container">
                     <li>
@@ -33,7 +33,7 @@ const FormOrder = (props) => {
                         />
                     </li>
                     <li>
-                        <button className="btn primary" type="submit">
+                        <button className="checkout_btn" type="submit">
                             Checkout
                         </button>
                     </li>
