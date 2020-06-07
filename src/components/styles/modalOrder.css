@@ -1,0 +1,31 @@
+.info_container {
+    border: 1px dashed black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.products_checkList {
+    list-style: none;
+}
+
+#modal_check {
+    padding-top: 20vh;
+    text-align: center;
+}
+
+#modal_check button {
+    height: 50px;
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: #70578b;
+    color: white;
+    margin-top: 1rem;
+}
+
+#modal_check button:hover {
+    background-color: rgb(128, 9, 122);
+}
