@@ -12,26 +12,10 @@ import { Link } from "react-router-dom";
 
 const BolsaCompra = (props) => {
     const [show, setShow] = useState(false);
-    const state = { name: "", email: "", address: "", total: 0 };
-    const handleInput = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
-    };
-    const createOrder = (e) => {
-        e.preventDefault();
-        const order = {
-            name: state.name,
-            email: state.email,
-            address: state.address,
-            cartItems: props.cartItems,
-        };
-        this.props.createOrder(order);
-    };
     const cartItems = props.cartItems;
-
     const handleClick = () => {
         setShow(true);
     };
-
     return (
         <div>
             <div className="steps_buy">
@@ -96,12 +80,7 @@ const BolsaCompra = (props) => {
                         </div>
                     </div>
                     <div className="col-sm-4">
-                        {show ? (
-                            <FormOrder
-                                submitFx={createOrder}
-                                onChangeFx={handleInput}
-                            />
-                        ) : null}
+                        {show ? <FormOrder /> : null}
                     </div>
                 </div>
             </div>
