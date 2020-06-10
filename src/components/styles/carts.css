@@ -7,6 +7,7 @@
     display: flex;
     width: 100%;
 }
+
 .cart ul {
     height: 68vh;
     overflow: hidden;
@@ -50,10 +51,8 @@
 
 .delete_container:hover {
     background-color: #e75353;
-
     border-radius: 50%;
     color: white;
-
     /* padding: 2px 8px 2px 8px; */
 }
 
@@ -65,9 +64,7 @@
     /* width: 200px; */
     color: black;
     font-weight: bold;
-
     /* display: flex; */
-
     /* justify-content: space-between; */
 }
 
@@ -148,6 +145,7 @@
     border-radius: 4px;
     text-align: center;
 }
+
 .proceed_btn:hover {
     color: white;
     background-color: #321f49;
@@ -156,4 +154,14 @@
 .total_btn_actions {
     display: flex;
     /* padding-left: 10px; */
+}
+
+.close_btn_no_products {
+    position: absolute;
+    bottom: 3rem;
+    width: 100%;
+}
+
+.width_total {
+    width: 90% !important;
 }

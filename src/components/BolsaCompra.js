@@ -16,7 +16,10 @@ const BolsaCompra = (props) => {
     const handleClick = () => {
         setShow(true);
     };
-    return (
+
+    return cartItems.length === 0 ? (
+        window.location.reload(false)
+    ) : (
         <div>
             <div className="steps_buy">
                 <img className="logo_compra" src="logo192.png" alt="logo" />

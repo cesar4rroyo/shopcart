@@ -17,6 +17,14 @@ class Cart extends Component {
                 {cartItems.length === 0 ? (
                     <div className="cart cart-header">
                         No tienes ningun producto
+                        <div className="close_btn_no_products">
+                            <button
+                                className="close_btn width_total"
+                                onClick={this.props.onClose}
+                            >
+                                Cerrar
+                            </button>
+                        </div>
                     </div>
                 ) : (
                     <div className="cart cart-header">
