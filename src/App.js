@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BolsaCompra from "./components/BolsaCompra";
+import AdminSection from "./components/AdminSection";
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Provider store={store}>
                 <Switch>
                     <Route exact path="/" component={Home}></Route>
+                    <Route exact path="/admin" component={AdminSection}></Route>
                     <Route exact path="/compra" component={BolsaCompra}></Route>
                 </Switch>
             </Provider>
