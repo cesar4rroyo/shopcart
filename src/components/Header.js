@@ -3,6 +3,7 @@ import "./styles/Header.css";
 import SearchResponsive from "./SearchResponsive";
 import { connect } from "react-redux";
 import SlideCart from "./SlideCart";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
     const [search, setSearch] = useState(false);
@@ -56,9 +57,9 @@ const Header = (props) => {
                 </li>
                 <li>
                     <div className="user_container">
-                        <a href="/">
+                        <Link to="/login">
                             <i className="far fa-user-circle"></i>
-                        </a>
+                        </Link>
                         <div className="menu_text">
                             <span>Bienvenid@</span>
                         </div>
@@ -84,7 +85,9 @@ const Header = (props) => {
                         <i onClick={handleSearch} className="fas fa-search"></i>
                     </li>
                     <li>
-                        <i className="far fa-user-circle"></i>
+                        <Link to="/login">
+                            <i className="far fa-user-circle"></i>
+                        </Link>
                     </li>
                     <li>
                         <i

@@ -9,43 +9,48 @@ class OrdersAdmin extends Component {
     render() {
         const { orders } = this.props;
         return !orders ? (
-            <div>Loading</div>
+            <React.Fragment>
+                <div>Loading</div>
+            </React.Fragment>
         ) : (
-            <div className="orders">
-                <h2>Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>DATE</th>
-                            <th>TOTAL</th>
-                            <th>NAME</th>
-                            <th>EMAIL</th>
-                            <th>ADDRESS</th>
-                            <th>ITEMS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {orders.map((order, index) => (
-                            <tr key={index}>
-                                <td>{order._id}</td>
-                                <td>{order.createdAt}</td>
-                                <td>{order.total}</td>
-                                <td>{order.name}</td>
-                                <td>{order.email}</td>
-                                <td>{order.address}</td>
-                                <td>
-                                    {order.cartItems.map((item, index) => (
-                                        <div key={index}>
-                                            {item.count} {" x "} {item.title}
-                                        </div>
-                                    ))}
-                                </td>
+            <React.Fragment>
+                <div className="orders">
+                    <h2>Orders</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>DATE</th>
+                                <th>TOTAL</th>
+                                <th>NAME</th>
+                                <th>EMAIL</th>
+                                <th>ADDRESS</th>
+                                <th>ITEMS</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            {orders.map((order, index) => (
+                                <tr key={index}>
+                                    <td>{order._id}</td>
+                                    <td>{order.createdAt}</td>
+                                    <td>{order.total}</td>
+                                    <td>{order.name}</td>
+                                    <td>{order.email}</td>
+                                    <td>{order.address}</td>
+                                    <td>
+                                        {order.cartItems.map((item, index) => (
+                                            <div key={index}>
+                                                {item.count} {" x "}{" "}
+                                                {item.title}
+                                            </div>
+                                        ))}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </React.Fragment>
         );
     }
 }

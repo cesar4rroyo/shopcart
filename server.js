@@ -39,7 +39,19 @@ app.delete("/api/products/:id", async (req, res) => {
     const deletedProduct = await Product.findByIdAndDelete(req.params.id);
     res.send(deletedProduct);
 });
-
+// const User = mongoose.model(
+//     "user",
+//     new mongoose.Schema({
+//         first_name: String,
+//         last_name: String,
+//         email: String,
+//         password: String,
+//         date: {
+//             type: Date,
+//             default: Date.now,
+//         },
+//     })
+// );
 const Order = mongoose.model(
     "order",
     new mongoose.Schema(
