@@ -33,6 +33,7 @@
     margin-left: 4px;
     margin-right: 4px;
 }
+
 .step_number_off {
     background-color: rgb(138, 133, 133);
     color: white;
@@ -58,7 +59,7 @@
     background-color: #70578b;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     text-align: center;
 }
 
@@ -80,10 +81,12 @@
     padding: 4px;
     border-bottom: 1px dashed #70578b;
 }
+
 .form_container {
     background-color: white;
     padding: 20px;
 }
+
 .checkout_btn {
     height: 40px;
     width: 100%;
@@ -92,6 +95,7 @@
     color: white;
     border-radius: 5px;
 }
+
 .checkout_btn:hover {
     background-color: rgb(4, 88, 39);
 }
