@@ -33,14 +33,10 @@ Important:
 Note: 
 - If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-##Post data
+## Post data
 Using Postman, the data's body must have this structure in JSON format, the images should be at images folder in the public folder.
 Example:
 <img src="https://raw.githubusercontent.com/cesar4rroyo/shopcart/master/public/images/post.png">
-
-##Example v.1.0
-<img src="https://raw.githubusercontent.com/cesar4rroyo/shopcart/master/public/images/ss.png">
-
 
 ## Dependencies
 1. body-parser
@@ -54,6 +50,8 @@ Example:
 9. shortid
 10. styled-components
 
+## Example v.1.0
+<img src="https://raw.githubusercontent.com/cesar4rroyo/shopcart/master/public/images/ss.png">
 
 ## License
 Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
