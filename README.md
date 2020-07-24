@@ -52,7 +52,10 @@ Example:
 
 ## Example v.1.0
 <img src="https://raw.githubusercontent.com/cesar4rroyo/shopcart/master/public/images/ss.png">
+
+
 ## Demo v.1.0
+
 <a href="https://react-shoping-cart-test.herokuapp.com/">View demo<a/>
 
 
