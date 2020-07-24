@@ -52,6 +52,9 @@ Example:
 
 ## Example v.1.0
 <img src="https://raw.githubusercontent.com/cesar4rroyo/shopcart/master/public/images/ss.png">
+## Demo v.1.0
+[View demo here](https://react-shoping-cart-test.herokuapp.com/ "View demo here")
+
 
 ## License
 Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
