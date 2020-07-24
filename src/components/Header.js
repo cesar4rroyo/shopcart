@@ -3,6 +3,7 @@ import "./styles/Header.css";
 import SearchResponsive from "./SearchResponsive";
 import { connect } from "react-redux";
 import SlideCart from "./SlideCart";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
     const [search, setSearch] = useState(false);
@@ -55,10 +56,12 @@ const Header = (props) => {
                     </div>
                 </li>
                 <li>
-                    <div className="user_container">
-                        <a href="/">
+                    <div className="user_container"
+
+                    >
+                        <Link to="/admin">
                             <i className="far fa-user-circle"></i>
-                        </a>
+                        </Link>
                         <div className="menu_text">
                             <span>Bienvenid@</span>
                         </div>
@@ -79,31 +82,31 @@ const Header = (props) => {
             {search ? (
                 <SearchResponsive onClose={handleSearch} />
             ) : (
-                <ul className="responsive_menu">
-                    <li>
-                        <i onClick={handleSearch} className="fas fa-search"></i>
-                    </li>
-                    <li>
-                        <i className="far fa-user-circle"></i>
-                    </li>
-                    <li>
-                        <i
-                            className="fas fa-shopping-cart"
-                            onClick={handleClick}
-                        ></i>
-                        <span className="total_products">
-                            {cartItems.length !== 0
-                                ? cartItems.reduce((a, c) => a + c.count, 0)
-                                : null}
-                        </span>
-                    </li>
-                    <li className="menu_responsive_icon">
-                        <a href="/">
-                            <i className="fas fa-bars"></i>
-                        </a>
-                    </li>
-                </ul>
-            )}
+                    <ul className="responsive_menu">
+                        <li>
+                            <i onClick={handleSearch} className="fas fa-search"></i>
+                        </li>
+                        <li>
+                            <i className="far fa-user-circle"></i>
+                        </li>
+                        <li>
+                            <i
+                                className="fas fa-shopping-cart"
+                                onClick={handleClick}
+                            ></i>
+                            <span className="total_products">
+                                {cartItems.length !== 0
+                                    ? cartItems.reduce((a, c) => a + c.count, 0)
+                                    : null}
+                            </span>
+                        </li>
+                        <li className="menu_responsive_icon">
+                            <a href="/">
+                                <i className="fas fa-bars"></i>
+                            </a>
+                        </li>
+                    </ul>
+                )}
             {visible ? (
                 <SlideCart
                     createOrder={props.createOrder}
